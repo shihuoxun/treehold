@@ -1,0 +1,95 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Psychological Tree Hole</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <p class="eyebrow">Psychological Tree Hole</p>
+      <h1>Lay down your worries, let the Tree Hole carry them.</h1>
+      <p class="lead">
+        This calm space welcomes every untold story. Write anonymously, watch your words drift into the Tree Hole,
+        and know that a compassionate counselor will read your letter in quiet confidence.
+      </p>
+      <a class="donate-btn" href="#donate">Offer a Compassionate Donation</a>
+    </div>
+    <div class="hero-visual">
+      <div class="tree">
+        <div class="tree-hole"></div>
+        <div class="tree-canopy layer-one"></div>
+        <div class="tree-canopy layer-two"></div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="treehole-section">
+      <div class="form-card">
+        <h2>Write to the Psychological Tree Hole</h2>
+        <p id="daily-limit-note" class="daily-limit-note">Loading daily limit...</p>
+        <form id="letter-form">
+          <label for="letter">What would you like to release today?</label>
+          <textarea id="letter" name="letter" rows="8" maxlength="2000" placeholder="Share as much as you need. Minimum 10 characters." required></textarea>
+          <div class="actions">
+            <button type="submit" class="primary">Send Letter</button>
+          </div>
+        </form>
+        <p id="status" class="status"></p>
+      </div>
+      <div class="treehole-visual">
+        <div class="gentle-note">Letters enter the Tree Hole with a soft glide.</div>
+        <div class="treehole-scene">
+          <div class="treehole-tree">
+            <div class="hole"></div>
+          </div>
+          <div class="letter-flight" id="letter-flight"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="donate" class="donation-section">
+      <h2>Give Light, Receive Ease</h2>
+      <p>
+        Inspired by Buddhist compassion, this Tree Hole believes that helping others is helping yourself. Offering a donation
+        keeps counseling support available to anyone in need. Each gift is a reminder that merit arises when we relieve the
+        suffering of all beings--including our own hearts.
+      </p>
+      <a class="donate-btn solid" href="https://www.paypal.com/donate" target="_blank" rel="noreferrer">
+        Donate to the Compassionate Canopy
+      </a>
+      <p class="donation-note">If you do not have a preferred platform, the button above opens PayPal's donation page.</p>
+    </section>
+
+    <section class="info-section">
+      <article>
+        <h3>How the Tree Hole Works</h3>
+        <p>
+          1) Write a letter anonymously. 2) Watch it glide into the Tree Hole. 3) Our counselor reads and responds through the
+          admin dashboard. 4) When a reply is ready, it remains paired with your original letter for mindful continuity.
+        </p>
+      </article>
+      <article>
+        <h3>Why There Is a Daily Limit</h3>
+        <p>
+          To make sure every letter receives a thoughtful response, the administrator can gently limit how many letters arrive
+          from the same IP each day. This keeps the pace humane for both the counselor and the seekers.
+        </p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>Need to manage letters? Visit the <a href="/admin.html">administrator dashboard</a>.</p>
+  </footer>
+
+  <script src="/app.js" defer></script>
+</body>
+</html>
+

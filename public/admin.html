@@ -1,0 +1,53 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tree Hole Admin</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="admin-body">
+  <main class="admin-shell">
+    <header>
+      <h1>Administrator Dashboard</h1>
+      <p>Review letters, share compassionate replies, and set the daily submission limit.</p>
+    </header>
+
+    <section class="admin-card" id="auth-card">
+      <h2>Authenticate</h2>
+      <form id="auth-form">
+        <label for="admin-token">Admin token</label>
+        <input type="password" id="admin-token" placeholder="treehole-admin" required>
+        <button type="submit" class="primary">Unlock Dashboard</button>
+      </form>
+      <p class="hint">You can override the default token by setting the ADMIN_TOKEN environment variable.</p>
+    </section>
+
+    <section class="admin-card hidden" id="settings-card">
+      <h2>Daily Submission Limit</h2>
+      <form id="limit-form" class="inline-form">
+        <label for="daily-limit">Letters per IP per day</label>
+        <input type="number" id="daily-limit" min="1" required>
+        <button type="submit" class="secondary">Update Limit</button>
+      </form>
+      <p id="limit-status" class="status"></p>
+    </section>
+
+    <section class="admin-card hidden" id="letters-card">
+      <div class="card-header">
+        <h2>Inbox</h2>
+        <button id="refresh-letters" class="ghost">Refresh</button>
+      </div>
+      <div id="letters-list" class="letters-list">
+        <p class="hint">No letters yet. When users write, they will appear here.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="/admin.js" defer></script>
+</body>
+</html>
+
